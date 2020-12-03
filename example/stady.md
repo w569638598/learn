@@ -31,7 +31,7 @@ e.date.replace(/(.+?)\-(.+?)\-(.+)/,"$1年$2月$3日")
 ```css
 scroll-behavior
 ```
-###左边一个右边多个子导航，左边文字垂直居中-父导航样式
+### 左边一个右边多个子导航，左边文字垂直居中-父导航样式
 ```css
     display: flex;
     flex-direction: column;
