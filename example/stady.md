@@ -5,7 +5,7 @@
         (function(doc, win, designWidth){
             const html = document.documentElement;
             const refreshRem = () => {
-                const clientWidth = html.clientWidth;
+                const clientWidth = html.getBoundingClientRect().width;
                 if(clientWidth >= designWidth){
                     html.style.fontSize = "100px";
                 }else{
