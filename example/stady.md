@@ -34,7 +34,7 @@ user-scalable=no  //用户是否可以通过他的手势来缩放整个应用程
 
     ```css
     html{
-        font-size: clientWidth（屏幕宽度） / designWidth（dpr） / 3.75(一份vw的宽度); 
+        font-size: clientWidth（屏幕宽度） / designWidth（设计图尺寸） / 3.75(375px是假如设计图是750，那么对照的手机就是ipone6.7.8，他们的px单位值是375px;3.75是一份vw的宽度); 
     }
     ```
 
