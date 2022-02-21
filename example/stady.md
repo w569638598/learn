@@ -56,6 +56,13 @@ e.date.replace(/(.+?)\-(.+?)\-(.+)/,"$1年$2月$3日")
 
 ## css
 
+### 表头定位
+```css
+th{
+    position: sticky;
+    top: 0;
+}
+
 ### css滚动条动画
 ```css
 scroll-behavior
