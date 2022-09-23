@@ -1,2 +1,3 @@
 const a = 'sssssss'
-let sys = 'ubantu'
+
+let syss = 'win'
