@@ -71,7 +71,6 @@ ctrl+b      向上翻页
 ctrl+d      向下移动半页
 ctrl+u      向上移动半页
 ctrl+v      开启连选
-ctrl+g      光标位置信息
 alt+d       删除当前行和下一行
 alt+x       删除光标所在位置内容
 shift + 下箭头  选择到下一行
