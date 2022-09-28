@@ -1,13 +1,18 @@
+
 # 下载工具
-```
+
+```text
 下载wget
 yum install wget
 yum -y install wget        安装下载工具wget
 
 wget使用方法  wget下载地址，如果wget <https://nodejs.org/dist/v12.13.0/node-v12.13.0-x64.msi>
+
 ```
+
 # 解压文件
-```
+
+```text
 xz -d 文件名
 tar -xf 文件名
 
@@ -23,15 +28,20 @@ curl 文件传输什么的
 curl www.baidu.com可获取返回体，图片的画，直接下载图片
 curl -i www.baidu.com   带返回头
 ```
-# 开启网络
+
+ # 开启网络
 | 命令 | 参数 |
 | --- | --- |
   cd | /etc/sysconfig/network-scripts|
  vi | ifcfg-enp0s3 |
-```
+
+```text
+
 noboot值改为yes
+
 ```
-#  跟目录文件解释
+
+ # 跟目录文件解释
 
 | 命令 | 参数 |
 | --- | --- |
@@ -53,9 +63,7 @@ noboot值改为yes
 /proc           | 虚拟文件系统（存放内存里，开关机就没了，不占磁盘空间）
 /sys            | 虚拟的文件系统，和系统相关，和内存相关的
 /lost+found     | 文件系统发生错误的时候，存放错误文件碎片的
-
-
-#  文件夹命令
+ # 文件夹命令
 | 命令 | 参数 |
 | - | -|
 ls -al      | 可显示隐藏文件
@@ -69,9 +77,9 @@ pwd         | 当前目录在绝对目录想是什么
 vi          | 进入文件
 cat         | 查看文件
 
-#  文件类的命令
+ # 文件类的命令
 | 命令 | 参数 |
-| --- | ---|
+| --- | --- |
 q!                          | 强制退出，不保存
 ctrl+f                      | 向下翻页
 ctrl+b                      | 向上翻页
@@ -105,7 +113,9 @@ cat a.text |grep 'asdf'     | 带有asdf的行
 chmod 777                   | 文件名  给文件加权限
 mkdir -m 777 test           | 文件赋权限
 ---
-```
+
+```text
+
 权限
 R   W   X
 4   2   1
@@ -116,8 +126,10 @@ R   W   X
 第一组：当前所属用户的权限
 第二组：当前所属组的权限
 第三组：其他用户的权限
+
 ```
-#  用户操作
+
+ # 用户操作
 |命令|参数|
 |-|-|
 useradd                     | 创建用户
@@ -135,7 +147,7 @@ id panda                    | 用户信息
 su panda                    | 切换用户
 passwd   panda              | 设置用户密码（panda是举例用户名）
 ssh panda@192.168.1.1       | 用户登陆电脑（panda是举例用户名）
-#  系统信息
+ # 系统信息
 | 命令|参数|
 | -| -|
 df                          | 磁盘空间
@@ -144,8 +156,7 @@ df -i                       | 磁盘索引空间
 lscpu                       | 查看cpu信息
 ps aux                      | 查看进程
 top                         | 资源占用情况
-
-#  系统设置
+ # 系统设置
 |命令|参数|
 |-|-|
 systemctl disable firewalld   | 关闭防火墙
@@ -154,5 +165,5 @@ service  iptables status      | 有没有iptables防火墙
 firewall-cmd --reload         | 重新加载防火墙规则
 ip addr                       | 查看ip
 ---
-# xshell
+ # xshell
 ```ssh  panda@192.168.0.120    panda是用户名```
