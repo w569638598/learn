@@ -1,15 +1,18 @@
 # 测网
+
 cd /etc/sysconfig/network-scripts/
 vi ifcfg-n
 noboot值改为yes
 
 # 下载工具
+
 下载wget
 yum install wget
 
-wget使用方法  wget下载地址，如果wget https://nodejs.org/dist/v12.13.0/node-v12.13.0-x64.msi
+wget使用方法  wget下载地址，如果wget <https://nodejs.org/dist/v12.13.0/node-v12.13.0-x64.msi>
 
 # 解压文件
+
 xz -d 文件名
 tar -xf 文件名
 
@@ -22,6 +25,7 @@ npm重复
 使用ln -sf命令
 
 # 开启网络
+
 cd /etc/sysconfig/network-scripts/
 vi ifcfg-***
 
@@ -52,7 +56,7 @@ proc        虚拟文件，存内存里，不存磁盘里
 sys     虚拟文件系统，和系统和内核相关
 lost+found  当文件系统发生错误的时候存放的，如果需要找回
 
-# 文件夹命令
+#  文件夹命令
 ls -al      可显示隐藏文件
 mkdir       创建文件 里面为空的
 vi          创建并进入文件（vi  a.txt）
@@ -64,7 +68,7 @@ pwd     当前目录在绝对目录想是什么
 vi          进入文件
 cat         查看文件
 
-# 文件类的命令
+#  文件类的命令
 q!      强制退出，不保存
 ctrl+f      向下翻页
 ctrl+b      向上翻页
@@ -85,7 +89,7 @@ shift + h 光标跳转到页首
 -       往上移
 三空格|三右  
 shift+G     末尾
-win + e	行尾
+win + e 行尾
 gg      首行
 dd      删除
 /asd        向下查找
@@ -109,18 +113,17 @@ R   W   X
 第二组：当前所属组的权限
 第三组：其他用户的权限
 
-
-# 设置网络
+#  设置网络
 cd /etc
 cd sysconfig/
 cd network-scripts/
 vi ifcfg-enp0s3
 
-# 用户操作
+#  用户操作
 useradd                     创建用户
 cat /etc/group              查看用户
 cat /etc/passwd             查看用户
-groups                      当前用户    
+groups                      当前用户
 whoami                      当前是谁
 useradd G 用户组 用户名      把用户添加到用户组里
 groupdel panda              删除用户组
@@ -134,7 +137,7 @@ su panda                    切换用户
 passwd   panda              设置用户密码（panda是举例用户名）
 ssh panda@192.168.1.1       用户登陆电脑（panda是举例用户名）
 
-# 系统信息
+#  系统信息
 df                          磁盘空间
 df -h                       磁盘空间
 df -i                       磁盘索引空间
@@ -144,7 +147,7 @@ top                         资源占用情况
 
 yum -y install wget        安装下载工具wget
 
-# 系统设置
+#  系统设置
 systemctl disable firewalld   关闭防火墙
 firewall-cmd --state        查看防火墙状态
 service  iptables status    有没有iptables防火墙
