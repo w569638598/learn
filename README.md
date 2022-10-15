@@ -38,7 +38,7 @@ keytool -genkey -alias android.keystore -keyalg RSA -validity 36500 -keystore an
 -keystore 文件名。
 
 
-##### 查看
+查看
 keytool -list -keystore "android.keystore"
 ```
 
