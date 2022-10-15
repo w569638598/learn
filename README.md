@@ -26,6 +26,21 @@ user-scalable=no  //用户是否可以通过他的手势来缩放整个应用程
             doc.addEventListener("DOMContentLoaded", refreshRem)
         })(document, window, 750)
 ```
+### 安卓证书key创建
+```
+keytool -genkey -alias android.keystore -keyalg RSA -validity 36500 -keystore android.keystore
+（这句话的意思是：创建了一个名为android.keystore的别名也为android.keystore的采用RSA加密算法的有效期为100年的证书文件）
+注：
+-genkey 生成文件。
+-alias 别名。
+-keyalg 加密算法。
+-validity 有效期。
+-keystore 文件名。
+
+
+##### 查看
+keytool -list -keystore "android.keystore"
+```
 
 #### vw适配
     vm是把屏幕分成100份
