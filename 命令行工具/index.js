@@ -1,5 +1,5 @@
 var inquirer = require('inquirer');
-
+// import inquirer from 'inquirer';
 inquirer
   .prompt([
     /* Pass your questions in here */
