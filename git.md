@@ -34,11 +34,21 @@ git push -u origin master
 
 //忽略指定文件
 git rm .env --cached
+git checkout -- .
+git checkout .
 ```
 
 ## 撤销操作
 
 ```
+以下就是 git reset 回退的方式：
+
+git reset --mixed：版本库 -> 暂存区
+
+git reset --soft：暂存区 -> 工作区
+
+git reset --hard: 版本库 -> 暂存区 -> 工作区
+
 --撤销commit文件，还未push--
 
 git log --pretty=oneline  ->简洁显示日志记录
@@ -83,7 +93,3 @@ git push -f origin master
 
 ```
 
-## 同步代码
-```
-git rebase master
-```
