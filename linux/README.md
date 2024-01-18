@@ -35,12 +35,7 @@ curl -i www.baidu.com   带返回头
 | --- | --- |
   cd | /etc/sysconfig/network-scripts|
  vi | ifcfg-enp0s3 |
-
-```text
-
 noboot值改为yes
-
-```
 
 # 跟目录文件解释
 
@@ -116,7 +111,12 @@ cat a.text |grep 'asdf'     | 带有asdf的行
 |grep                       | 筛选，文件名亦可
 chmod 777                   | 文件名  给文件加权限
 mkdir -m 777 test           | 文件赋权限
+ls -ld                      | 查看文件夹信息（权限、时间、大小）
+chown :dev /path            给dev用户组加/path路径的权限
+cp [options] source_file destination_file | 源文件路径 目标路径 -r拷贝目录及其下所有文件
+
 ---
+
 
 ```text
 
@@ -130,6 +130,17 @@ R   W   X
 第一组：当前所属用户的权限
 第二组：当前所属组的权限
 第三组：其他用户的权限
+
+要将路径/home/wl/Documents/promise-folder-test的读写执行权限赋予dev用户组，您可以使用以下命令来实现：
+
+bash
+sudo chgrp dev /home/wl/Documents/promise-folder-test  # 更改所属组为dev  
+sudo chmod g+rwx /home/wl/Documents/promise-folder-test  # 给所属组添加读、写、执行权限
+第一条命令sudo chgrp dev /home/wl/Documents/promise-folder-test用于将文件或目录的所属组更改为dev。
+
+第二条命令sudo chmod g+rwx /home/wl/Documents/promise-folder-test用于给所属组（现在已经是dev组）添加读（read）、写（write）和执行（execute）权限。
+
+这样，dev用户组就能够读取、写入和执行/home/wl/Documents/promise-folder-test路径下的文件了。
 
 ```
 

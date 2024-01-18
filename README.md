@@ -103,4 +103,10 @@ overflow: hidden;
 -webkit-line-clamp: 2
 ```
 
+#### 自定义li样式
+```css
+li::marker {
+                    content: counter(list-item) "、";
+                  }
 
+                  ```
